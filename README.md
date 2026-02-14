@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 # attendance-form<script>
 
 const WEB_APP_URL="https://script.google.com/macros/s/AKfycbyy59mpAWgxq5I6gJUQEzfKKfbx1akFL211NaFJzcKJxGLlOWogx9q29wp9EpkRHw5f/exec";
@@ -35,3 +37,5 @@ alert("Error: "+err);
 }
 
 </script>
+</body>
+</html>
