@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html>
-# attendance-form<script>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Installation Entry</title>
+</head>
+<body>
 
-const WEB_APP_URL="https://script.google.com/macros/s/AKfycbyy59mpAWgxq5I6gJUQEzfKKfbx1akFL211NaFJzcKJxGLlOWogx9q29wp9EpkRHw5f/exec";
+<h2>Installation Entry</h2>
+
+<input type="datetime-local" id="installDate"><br><br>
+<input id="indusId" placeholder="Indus ID"><br><br>
+<input id="engineer1" placeholder="Engineer Name"><br><br>
+<input id="wire" placeholder="Wire Used"><br><br>
+<input id="district" placeholder="District"><br><br>
+<textarea id="remarks" placeholder="Remarks"></textarea><br><br>
+<input id="engineer2" placeholder="Engineer Name 2"><br><br>
+<input id="sensor" placeholder="Sensor No"><br><br>
+
+<button onclick="submitForm()">Submit</button>
+
+<script>
+
+const WEB_APP_URL="https://script.google.com/macros/s/AKfycbyy59mpAWgxq5I6gJUQEzfKKfbx1akFL211NaFJzcKJxGLlOWogx9q29wp9EpkRHw5f/exec%22";
 
 function submitForm(){
 
@@ -21,14 +40,9 @@ fetch(WEB_APP_URL,{
 method:"POST",
 body:data
 })
-.then(res => res.text())
-.then(msg => {
-
+.then(res=>res.text())
+.then(msg=>{
 alert("Saved Successfully ✅");
-
-/* Form Clear */
-document.querySelectorAll("input, textarea").forEach(e=>e.value="");
-
 })
 .catch(err=>{
 alert("Error: "+err);
@@ -37,5 +51,6 @@ alert("Error: "+err);
 }
 
 </script>
+
 </body>
 </html>
